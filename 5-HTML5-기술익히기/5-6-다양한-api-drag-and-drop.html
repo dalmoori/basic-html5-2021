@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            body {
+                padding: 50px;
+            }
+
+            div {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 20px;
+                background-color: lightgrey;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Drag and Drop</h1>
+
+        <div id="box1" ondrop="dropThis(event)" ondragover="allowDropThis(event)">
+            <img
+                src="../images/square.png"
+                draggable="true"
+                ondragstart="dragThis(event)"
+                id="square"
+                width="200px"
+                height="200px"
+            />
+        </div>
+
+        <div id="box2" ondrop="dropThis(event)" ondragover="allowDropThis(event)"></div>
+
+        <!-- script -->
+        <script>
+            function allowDropThis(event) {
+                event.preventDefault();
+            }
+
+            function dragThis(event) {
+                event.dataTransfer.setData("square", event.target.id);
+            }
+
+            function dropThis(event) {
+                event.preventDefault();
+                const data = event.dataTransfer.getData("square");
+                event.target.appendChild(document.getElementById(data));
+            }
+        </script>
+    </body>
+</html>

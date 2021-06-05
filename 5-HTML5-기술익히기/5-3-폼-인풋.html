@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <!-- datalist -->
+        <form>
+            <label for="platform">운영체제를 선택하세요.</label>
+            <input list="mobile-platform" id="platform" />
+            <datalist id="mobile-platform">
+                <option value="안드로이드"></option>
+                <option value="IOS"></option>
+                <option value="기타"></option>
+            </datalist>
+        </form>
+
+        <!-- output -->
+        <form id="result" oninput="output.value = (data1.valueAsNumber || 0) * (data2.valueAsNumber || 0)">
+            <input type="number" id="data1" /> * <input type="number" id="data2" /> =
+            <output id="output" for="data1 data2" form="result">0</output>
+        </form>
+
+        <!-- 새로운 인풋 타입1 -->
+        <form>
+            number : <input type="number" /><br />
+            email : <input type="email" /><br />
+            url : <input type="url" /><br />
+            tel : <input type="tel" /><br />
+            search : <input type="search" />
+        </form>
+
+        <!-- 새로운 인풋 타입2 -->
+        <form>
+            time : <input type="time" /><br />
+            date : <input type="date" /><br />
+            datetime-local : <input type="datetime-local" />
+        </form>
+
+        <!-- 새로운 인풋 타입3 -->
+        <form>
+            month : <input type="month" /><br />
+            week : <input type="week" />
+        </form>
+
+        <!-- 새로운 인풋 타입4 -->
+        <form>
+            range : <input type="range" min="1" max="10" /><br />
+            color : <input type="color" />
+        </form>
+
+        <!-- 새로운 인풋 속성 -->
+        <!-- autocomplete, autofocus -->
+        <form>
+            <input type="text" autocomplete="on" /><br />
+            <input type="text" autofocus />
+        </form>
+
+        <!-- form 속성 -->
+        <form id="login">
+            <label for="id">아이디 : </label>
+            <input type="text" id="id" />
+        </form>
+
+        <div>
+            <label for="password">비밀번호 :</label>
+            <input type="password" form="login" id="password" />
+        </div>
+
+        <!-- width, height, min, max -->
+        <form>
+            <input type="image" src="../images/code.png" alt="Code" width="300px" height="150px" />
+            <input type="number" min="10" max="20" />
+        </form>
+
+        <!-- pattern -->
+        <form>
+            <label for="website">홈페이지 주소 :</label>
+            <input type="url" id="website" pattern="https?://.+" title="Include http://" />
+            <input type="submit" />
+        </form>
+
+        <!-- placeholder -->
+        <form>
+            <label for="name">이름 :</label>
+            <input type="text" id="name" placeholder="홍길동" />
+        </form>
+
+        <!-- required -->
+        <form>
+            <label for="name">[필수] 이름 :</label>
+            <input type="text" id="name" required /><br />
+            <label for="number">[필수] 전화번호 :</label>
+            <input type="tel" id="number" required /><br />
+            <label for="mail">이메일 :</label>
+            <input type="email" id="mail" /><br />
+            <input type="submit" />
+        </form>
+
+        <!-- step -->
+        <form>
+            <p>3의 배수</p>
+            <input type="number" min="3" step="3" />
+        </form>
+
+        <!-- multiple -->
+        <form>
+            <label for="photos">파일 다중 선택 :</label>
+            <input type="file" id="photos" multiple /><br />
+        </form>
+
+        <!-- 새로운 폼 속성 -->
+        <form autocomplete="on" novalidate>
+            <!-- 생략 -->
+        </form>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <!-- form 기본 형태 -->
+        <!-- <form action="/test-page" method="post"></form> -->
+
+        <!-- label 과 input 사용법 -->
+        <form action="/test-page" method="post">
+            <div>
+                <label for="name">이름</label>
+                <input type="text" name="name" />
+            </div>
+
+            <div>
+                <label for="mail">이메일</label>
+                <input type="email" id="mail" />
+            </div>
+
+            <div>
+                <label for="codenumber">패스워드</label>
+                <input type="password" id="codenumber" />
+            </div>
+
+            <!-- button의 사용 -->
+            <div>
+                <button type="submit">전송</button>
+                <button type="reset">초기화</button>
+                <button type="button" onclick="alert('버튼 클릭')">버튼</button>
+            </div>
+        </form>
+
+        <!-- 라디오 버튼과 체크박스 -->
+        <form>
+            <p>성별을 선택하세요.</p>
+            <div>
+                <label for="male">남자</label>
+                <input type="radio" id="male" name="gender" />
+                <label for="female">여자</label>
+                <input type="radio" id="female" name="gender" />
+            </div>
+
+            <p>좋아하는 음식들을 선택하세요.</p>
+            <div>
+                <label for="kimchi">김치</label>
+                <input type="checkbox" id="kimchi" name="food" />
+                <label for="chicken">치킨</label>
+                <input type="checkbox" id="chicken" name="food" />
+                <label for="pizza">피자</label>
+                <input type="checkbox" id="pizza" name="food" />
+                <label for="coke">콜라</label>
+                <input type="checkbox" id="coke" name="food" />
+            </div>
+        </form>
+
+        <!-- file -->
+        <form>
+            <input type="file" accept="image/*" />
+        </form>
+
+        <!-- 다양한 제어 속성 -->
+        <form>
+            <div>
+                <label for="option">구분</label>
+                <input type="text" id="option" value="신규회원" readonly />
+                <input type="text" value="사업자회원" disabled />
+            </div>
+
+            <div>
+                <label for="name">이름</label>
+                <input type="text" id="name" value="홍길동" />
+            </div>
+
+            <div>
+                <label for="phone">전화번호</label>
+                <input type="text" size="11" maxlength="11" />
+            </div>
+        </form>
+    </body>
+</html>

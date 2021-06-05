@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <form>
+            <label for="user-id">아이디 :</label>
+            <input id="user-id" type="text" /><br />
+            <label for="user-password">비밀번호 :</label>
+            <input id="user-password" type="password" /><br />
+            <button onclick="saveUserInfo(event)">Web Storage에 저장하기</button>
+            <button>새로고침하기</button>
+        </form>
+
+        <script>
+            const id = document.getElementById("user-id");
+            const password = document.getElementById("user-password");
+
+            function saveUserInfo(event) {
+                event.preventDefault();
+
+                if (id.value === "" || password.value === "") {
+                    alert("아이디와 비밀번호를 입력하세요.");
+                } else {
+                    const userInfo = {
+                        id: id.value,
+                        password: password.value,
+                    };
+
+                    localStorage.setItem("user", JSON.stringify(userInfo));
+                }
+            }
+
+            function main() {
+                const userInfo = JSON.parse(localStorage.getItem("user"));
+
+                if (userInfo) {
+                    id.value = userInfo.id;
+                    password.value = userInfo.password;
+                }
+            }
+
+            main();
+        </script>
+    </body>
+</html>
