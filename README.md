@@ -1,6 +1,8 @@
-![](./images/cover.png)
-
 도서 HTML5 독학백서 실습 코드입니다. 책의 목차와 일치 시키기 위해서 부득이하게 `.html` 파일명이 모두 한글로 작성되어 있습니다. (파일을 통째로 다운로드 하게되면 일부 환경에서 파일명이 깨질 수 있습니다.)
+
+- 질문은 [Issue](https://github.com/dalmoori/basic-html5-2021/issues)로 작성해주세요.
+
+![](./images/cover.png)
 
 ## eBook (전자책) 구매 링크
 
